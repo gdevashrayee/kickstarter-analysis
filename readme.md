@@ -7,8 +7,8 @@
 * [Analyis and Challenges](#analysis-and-challenges)
 * [First steps](#first-steps)
 * [The ask for the analysis](#the-ask-for-the-analysis)
-* [Ask 1: Analysis of theatre outcomes based on launch dates](#ask-1:-analysis-of-theatre-outcomes-based-on-launch-date)
-* [Ask 2: Analysis of the percentage of outcomes based on funding goal amounts](#ask-2:-analysis-of-the-percentage-of-outcomes-based-on-funding-goal-amounts)
+* [Ask 1:Analysis of theatre outcomes based on launch dates](#ask-1:analysis-of-theatre-outcomes-based-on-launch-date)
+* [Ask 2:Analysis of the percentage of outcomes based on funding goal amounts](#ask-2:analysis-of-the-percentage-of-outcomes-based-on-funding-goal-amounts)
 * [Challenges Encountered](#challenges-encountered)
 * [Results](#results)
 
