@@ -30,7 +30,7 @@ As mentioned in the overview, Louise requires two data points for setting her fu
 2. Analysis of the percentage of successful, failed and cancelled outcomes based on the funding goal amounts, of the Theatre campaigns, focusing on plays.
 The results of the asks would allow Louise to visualise a summary of the data to clearly identify if certain time of the year is trending to be more successful than the other and also compare the success rates of the plays under each fundraising goal range.
 
-### Ask 1: Analysis of theatre outcomes based on launch dates
+### Ask 1:Analysis of theatre outcomes based on launch dates
 In order to begin analysis based on the launch dates, I was first required to identify the actual dates on the Kickstarter worksheet. When looking at the dataset, it is identified that the columns “deadline” (column I) and “launched_at” (column J) are in a Unix timestamp format and in order to conduct the analysis, the values in these columns need to be converted into a readable format showing day-month-year.
 
 ![Unix Timestamp](./img/img_1.png)
@@ -53,7 +53,7 @@ To allow for easy visualisation of the relationship between the outcomes and the
 
 ![Line Chart Outcomes by Launch date](./img/img_4.png)
 
-### Ask 2: Analysis of the percentage of outcomes based on funding goal amounts
+### Ask 2:Analysis of the percentage of outcomes based on funding goal amounts
 As the title suggests, the focus of this section of the analysis is to identify and compare the percentage of successful, canceled and failed plays based on the funding goal amounts. In order to move forward, the funding goal amounts were grouped in ranges of certain dollar values. A new column on a new worksheet was created that incorporated 12 different ranges of the goal amount, starting from less than $1000 up to anything greater than $50,000. These ranges accounted for all the goal amounts associated to the campaigns listed on the original Kickstarter worksheet.
 
 ![Goal Range](./img/img_5.png)
