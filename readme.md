@@ -3,12 +3,12 @@
 
 ## Table of Contents
 * [Overview of the project](#overview-of-the-project)
-* [Purpose] (#purpose)
+* [Purpose](#purpose)
 * [Analyis and Challenges](#analysis-and-challenges)
 * [First steps](#first-steps)
 * [The ask for the analysis](#the-ask-for-the-analysis)
-* [Ask #1: Analysis of theatre outcomes based on launch dates](#ask-#1:-analysis-of-theatre-outcomes-based-on-launch-date)
-* [Ask #2: Analysis of the percentage of outcomes based on funding goal amounts](#ask-#2:-analysis-of-the-percentage-of-outcomes-based-on-funding-goal-amounts)
+* [Ask 1: Analysis of theatre outcomes based on launch dates](#ask-1:-analysis-of-theatre-outcomes-based-on-launch-date)
+* [Ask 2: Analysis of the percentage of outcomes based on funding goal amounts](#ask-2:-analysis-of-the-percentage-of-outcomes-based-on-funding-goal-amounts)
 * [Challenges Encountered](#challenges-encountered)
 * [Results](#results)
 
@@ -30,7 +30,7 @@ As mentioned in the overview, Louise requires two data points for setting her fu
 2. Analysis of the percentage of successful, failed and cancelled outcomes based on the funding goal amounts, of the Theatre campaigns, focusing on plays.
 The results of the asks would allow Louise to visualise a summary of the data to clearly identify if certain time of the year is trending to be more successful than the other and also compare the success rates of the plays under each fundraising goal range.
 
-### Ask #1: Analysis of theatre outcomes based on launch dates
+### Ask 1: Analysis of theatre outcomes based on launch dates
 In order to begin analysis based on the launch dates, I was first required to identify the actual dates on the Kickstarter worksheet. When looking at the dataset, it is identified that the columns “deadline” (column I) and “launched_at” (column J) are in a Unix timestamp format and in order to conduct the analysis, the values in these columns need to be converted into a readable format showing day-month-year.
 
 ![Unix Timestamp](./img/img_1.png)
@@ -43,7 +43,7 @@ To further organize the data in these columns, I created a new column “Date crea
 ![Date Conversion](./img/img_2.png)
 
 After this, the Kickstarter dataset needed to be organized by creating a “Years” column O, to extract the year from the “Date created conversion” column, that in turn allows for more clarity into the timeframes of the launch of a particular campaign. The following formula was used to extract the year for each campaign:<br />
-`=YEAR(P2)`<br />  
+`=YEAR(P2)` 
 where P2 refers to the first cell that contains a value under date created conversion column.<br />
 To further complete this analysis, I created a pivot table, using the entire data set from the Kickstarter worksheet and customised the fields to include, “Parent category” and “Years” as filters, “date created conversion” as rows and “outcomes” as columns and values. After setting up these fields, the pivot table was further filtered by removing the outcomes of live campaigns, the rows were modified to only show the months of the year by dragging and dropping the years and quarters to the spreadsheet to remove them from the pivot table fields and finally filtered the parent category to show data for “theatre” only.
 
@@ -53,7 +53,7 @@ To allow for easy visualisation of the relationship between the outcomes and the
 
 ![Line Chart Outcomes by Launch date](./img/img_4.png)
 
-### Ask #2: Analysis of the percentage of outcomes based on funding goal amounts
+### Ask 2: Analysis of the percentage of outcomes based on funding goal amounts
 As the title suggests, the focus of this section of the analysis is to identify and compare the percentage of successful, canceled and failed plays based on the funding goal amounts. In order to move forward, the funding goal amounts were grouped in ranges of certain dollar values. A new column on a new worksheet was created that incorporated 12 different ranges of the goal amount, starting from less than $1000 up to anything greater than $50,000. These ranges accounted for all the goal amounts associated to the campaigns listed on the original Kickstarter worksheet.
 
 ![Goal Range](./img/img_5.png)
@@ -69,7 +69,7 @@ The following formulae were used for the same:<br />
 **Ex of failed plays for goal range between $30000 to $34999**<br />
 `=COUNTIFS(Kickstarter!$F:$F,"failed",Kickstarter!$D:$D,">=30000",Kickstarter!$D:$D,"<=34999",Kickstarter!$S:$S,"plays")`<br />
 Once the number of outcomes for each goal range was identified, a total of successful, failed and canceled projects for each goal range was identified using the SUM function.
-s
+
 ![Outcomes based on goal range](./img/img_6.png)
 
 Once, I had the sum of the total projects, I then calculated the percentages of each outcome per dollar amount range.
@@ -91,20 +91,22 @@ To allow Louise to understand the trends better and visualize the relationship b
 
 ![Line Chart Outcomes by Launch date](./img/img_4.png)
 
-* In general, it can be concluded that the winter months overall have less popularity to launch a theatre campaign as compared to spring/summer months. The possible reasons could account for the holiday season and/or may be the weather in general.<br />
+* In general, it can be concluded that the winter months overall have less popularity to launch a theatre campaign as compared to spring/summer months. The possible reasons could account for the holiday season and/or may be the weather in general.
+
 **2. What can you conclude about the outcomes based on goals?**<br />
 * Clearly, the success rate is higher for campaigns with a funding goal that is less than $5000. These campaigns saw an average of 74% success rate which is higher than the success rates average of 50% for all campaigns with a goal range higher than $5000. 
 
 ![Line chart Outcomes percentage based on goal](./img/img_8.png)
 
 **3. What are some limitations of this dataset?**<br />
-* There are a few items that come to my mind, which upon adding / having access to, may have added value to the existing dataset and given us an opportunity to dive deeper into the results of the analysis.
+There are a few items that come to my mind, which upon adding / having access to, may have added value to the existing dataset and given us an opportunity to dive deeper into the results of the analysis.
 - Demographic information of people who partook in the fundraiser.
 - Age groups of people we are catering to.
 - Comparison of outcomes on different platforms.
 - More data on how the campaigns were advertised and promoted.
 - May be include data for most recent years. The data set provided was between 2009-2017.
-- May be include the genre, which can help us analyse the success rates based on which was more favourable than the other and also allow us to determine the interest of crowd we are catering to.<br />
+- May be include the genre, which can help us analyse the success rates based on which was more favourable than the other and also allow us to determine the interest of crowd we are catering to.
+
 **4. What are some other possible tables and/or graphs that we could create?**<br />
 * Histogram to show the outcomes of all of parent category to determine if Kickstarter is a good platform for fundraising for theatre.<br />
 * Bar graph showing outcomes based on start and end date of the campaign, reflecting how the length of each campaign may or may not affect its success.<br />
