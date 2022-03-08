@@ -3,13 +3,13 @@
 
 ## Table of Contents
 * [Overview of the project](#overview-of-the-project)
-** [Purpose] (#Purpose)
+* [Purpose] (#Purpose)
 * [Analyis and Challenges](#analysis-and-challenges)
-** [First steps](#first-steps)
-** [The ask for the analysis](#the-ask-for-the-analysis)
-** [Ask #1: Analysis of theatre outcomes based on launch dates](#ask--#1:-analysis-of-theatre-outcomes-based-on-launch-date)
-** [Ask #2: Analysis of the percentage of outcomes based on funding goal amounts](#ask--#2:-analysis-of-the-percentage-of-outcomes-based-on-funding-goal-amounts)
-** [Challenges Encountered](#challenges-encountered)
+* [First steps](#first-steps)
+* [The ask for the analysis](#the-ask-for-the-analysis)
+* [Ask #1: Analysis of theatre outcomes based on launch dates](#ask--#1:-analysis-of-theatre-outcomes-based-on-launch-date)
+* [Ask #2: Analysis of the percentage of outcomes based on funding goal amounts](#ask--#2:-analysis-of-the-percentage-of-outcomes-based-on-funding-goal-amounts)
+* [Challenges Encountered](#challenges-encountered)
 * [Results](#results)
 
 ## Overview of the project
@@ -35,8 +35,9 @@ In order to begin analysis based on the launch dates, I was first required to id
 
 ![Unix Timestamp](./img/img_1.png)
  
-To further organize the data in these columns, I created a new column “Date created conversion” (column P) and “Date Ended Conversion” (column Q) to convert the Unix formatting into “yyyy-mm-dd” short date format. The following formula was used to make this conversion
-`=(((J2/60)/60)/24)+DATE(1970,1,1)`
+To further organize the data in these columns, I created a new column “Date created conversion” (column P) and “Date Ended Conversion” (column Q) to convert the Unix formatting into “yyyy-mm-dd” short date format. The following formula was used to make this conversion<br />
+
+`=(((J2/60)/60)/24)+DATE(1970,1,1)`<br />
 `=(((I2/60)/60)/24)+DATE(1970,1,1)`
 
 ![Date Conversion](./img/img_2.png)
